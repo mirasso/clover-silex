@@ -1,0 +1,34 @@
+{
+  "name": "clover/silex",
+  "type": "library",
+  "description": "Supporting classes/files for using Silex",
+  "keywords": [""],
+  "homepage": "https://bitbucket.org/mojibakeo/clover-silex",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Rei Nakahara",
+      "email": "nakahara@toyro.net"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "silex/silex": "1.3.0",
+    "twig/twig": ">=1.8.0,<2.0-dev",
+    "doctrine/dbal": "2.2.*",
+    "monolog/monolog": ">=1.0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Clover": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}

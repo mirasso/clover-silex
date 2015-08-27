@@ -1,0 +1,38 @@
+@mixin safe-clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin input-placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}
+
+@mixin gradient-top-lighten($color: #666, $lighten: 10%) {
+  background-color: $color;
+  @include filter-gradient(lighten($color, $lighten), $color, vertical);
+  @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
+}
+
+@mixin line-top($op1: 0.2, $op2: 0.3) {
+  border-top: 1px solid rgba(0, 0, 0, $op1);
+  @include box-shadow(0 1px 0 rgba(255, 255, 255, $op2) inset);
+}
+
+@mixin line-bottom($op1: 0.2, $op2: 0.3) {
+  border-bottom: 1px solid rgba(0, 0, 0, $op1);
+  @include box-shadow(0 1px 0 rgba(255, 255, 255, $op2));
+}
