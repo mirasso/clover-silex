@@ -29,7 +29,7 @@ abstract class DataHandler
             ->select('*')
             ->from($this->getTableName(), 't')
             ->execute()
-            ->fetch();
+            ->fetchAll();
     }
 
     /**
